@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="136dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:text="Time:"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/stopbtn"
+        app:layout_constraintEnd_toEndOf="@+id/informationtxt"
+        app:layout_constraintStart_toStartOf="@+id/informationtxt"
+        app:layout_constraintTop_toBottomOf="@+id/informationtxt" />
+
+    <TextView
+        android:id="@+id/informationtxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="21dp"
+        android:text="Runnable Handler Time Example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeText"
+        app:layout_constraintEnd_toEndOf="@+id/stopbtn"
+        app:layout_constraintStart_toStartOf="@+id/startbtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startbtn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="9dp"
+        android:text="Start"
+        android:onClick="start"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintEnd_toStartOf="@+id/stopbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+    <Button
+        android:id="@+id/stopbtn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="362dp"
+        android:onClick="stop"
+        android:text="Stop"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startbtn"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
